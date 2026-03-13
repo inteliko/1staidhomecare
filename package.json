@@ -1,0 +1,19 @@
+{
+  "name": "text-voice-system",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Landing, signup, pricing, and text/voice conversion system with Stripe integration",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "openai": "^4.89.0",
+    "stripe": "^16.12.0"
+  }
+}

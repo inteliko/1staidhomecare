@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers | 1st Aide Home Care, Inc.</title>
+  <meta name="description" content="Explore careers at 1st Aide Home Care, Inc., including home health aide and nursing positions, and apply online for home care opportunities in New York." />
+  <meta name="keywords" content="home health aide jobs New York, nursing positions NYC, home care careers New York" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/index.html" aria-label="1st Aide Home Care, Inc. home">
+          <img class="brand-logo" src="/logo-1st-aide.svg" alt="1st Aide Home Care, Inc." />
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-panel" id="site-menu">
+          <nav class="site-nav" aria-label="Primary">
+            <a href="/index.html">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/services.html">Services</a>
+            <a href="/service-areas.html">Service Areas</a>
+            <a class="active" href="/careers.html">Careers</a>
+            <a href="/contact.html">Contact</a>
+          </nav>
+          <a class="nav-cta" href="/contact.html">Request Care</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <div class="container">
+        <section class="page-title reveal is-visible">
+          <span class="eyebrow">Careers</span>
+          <h1>Join a home care team focused on skill, compassion, and dependable service.</h1>
+          <p>We are looking for professionals who take pride in supporting patients respectfully in their homes and communities across New York.</p>
+        </section>
+
+        <section class="section">
+          <div class="career-layout">
+            <div class="content-card reveal">
+              <h2>Why Work With Us</h2>
+              <p class="muted">Home care is deeply personal work. We value team members who are calm under pressure, attentive to detail, and committed to treating patients and families with respect.</p>
+              <div class="career-highlights">
+                <article class="job-card">
+                  <h3>Home Health Aide Positions</h3>
+                  <p class="muted">Support daily living, comfort, and safety for patients in their homes.</p>
+                  <ul>
+                    <li>Assist with personal care, hygiene, mobility, and routines.</li>
+                    <li>Build trust through consistent, compassionate visits.</li>
+                    <li>Help maintain dignity and a stable home environment.</li>
+                  </ul>
+                </article>
+                <article class="job-card">
+                  <h3>Nursing Positions</h3>
+                  <p class="muted">Provide skilled in-home care with clinical oversight and patient education.</p>
+                  <ul>
+                    <li>Monitor patient conditions and support care continuity.</li>
+                    <li>Coordinate with families and interdisciplinary professionals.</li>
+                    <li>Help patients manage health needs while remaining at home.</li>
+                  </ul>
+                </article>
+                <article class="job-card">
+                  <h3>Supportive Team Culture</h3>
+                  <p class="muted">We value professionalism, communication, and patient-centered judgment.</p>
+                  <ul>
+                    <li>Meaningful work in local communities.</li>
+                    <li>Opportunities to contribute across care settings.</li>
+                    <li>A team focused on quality service and compassion.</li>
+                  </ul>
+                </article>
+              </div>
+            </div>
+
+            <div class="form-card reveal delay-1">
+              <h2>Online Job Application</h2>
+              <p class="form-note">Submit your information and our recruiting team will contact you regarding available opportunities.</p>
+              <form id="careerForm">
+                <div class="form-grid">
+                  <label for="career-name">Full Name
+                    <input id="career-name" name="name" type="text" required />
+                  </label>
+                  <label for="career-phone">Phone Number
+                    <input id="career-phone" name="phone" type="tel" required />
+                  </label>
+                </div>
+                <div class="form-grid">
+                  <label for="career-email">Email Address
+                    <input id="career-email" name="email" type="email" required />
+                  </label>
+                  <label for="career-position">Position of Interest
+                    <select id="career-position" name="position" required>
+                      <option value="">Select a position</option>
+                      <option>Home Health Aide</option>
+                      <option>Nursing</option>
+                      <option>Therapy Services</option>
+                      <option>Administrative Support</option>
+                    </select>
+                  </label>
+                </div>
+                <label for="career-experience">Experience Summary
+                  <textarea id="career-experience" name="experience" placeholder="Describe your background, certifications, availability, and areas of interest." required></textarea>
+                </label>
+                <input type="submit" value="Submit Application" />
+                <p class="status" id="careerStatus" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>Careers at 1st Aide Home Care, Inc.</div>
+        <div><a href="tel:17184409207">718-440-9207</a> • Fax: 718-440-9208</div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="/site.js"></script>
+  <script>
+    const careerForm = document.getElementById('careerForm');
+    const careerStatus = document.getElementById('careerStatus');
+
+    careerForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      careerStatus.textContent = 'Submitting your application...';
+
+      const payload = Object.fromEntries(new FormData(careerForm).entries());
+      const response = await fetch('/api/careers', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await response.json();
+
+      if (!response.ok) {
+        careerStatus.textContent = data.error || 'Unable to submit your application right now.';
+        return;
+      }
+
+      careerForm.reset();
+      careerStatus.textContent = data.message;
+    });
+  </script>
+</body>
+</html>

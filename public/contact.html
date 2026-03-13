@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact 1st Aide Home Care, Inc. | Request Care</title>
+  <meta name="description" content="Contact 1st Aide Home Care, Inc. in Jackson Heights, NY to request home care services, ask questions, or speak with a care coordinator." />
+  <meta name="keywords" content="request care New York, licensed home care agency NYC, contact home care agency Jackson Heights" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/index.html" aria-label="1st Aide Home Care, Inc. home">
+          <img class="brand-logo" src="/logo-1st-aide.svg" alt="1st Aide Home Care, Inc." />
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-panel" id="site-menu">
+          <nav class="site-nav" aria-label="Primary">
+            <a href="/index.html">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/services.html">Services</a>
+            <a href="/service-areas.html">Service Areas</a>
+            <a href="/careers.html">Careers</a>
+            <a class="active" href="/contact.html">Contact</a>
+          </nav>
+          <a class="nav-cta" href="/contact.html">Request Care</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <div class="container">
+        <section class="page-title reveal is-visible">
+          <span class="eyebrow">Contact</span>
+          <h1>Connect with our team to request care or ask about services.</h1>
+          <p>We are available to discuss home care options, service coverage, and next steps for patients and families in New York.</p>
+        </section>
+
+        <section class="section">
+          <div class="contact-layout">
+            <div class="content-card reveal">
+              <h2>Office Information</h2>
+              <div class="contact-details">
+                <div class="detail-item">
+                  <strong>Address</strong>
+                  <span>37-18 73rd Street, Suite 401<br />Jackson Heights, NY 11372</span>
+                </div>
+                <div class="detail-item">
+                  <strong>Phone</strong>
+                  <a href="tel:17184409207">718-440-9207</a>
+                </div>
+                <div class="detail-item">
+                  <strong>Fax</strong>
+                  <span>718-440-9208</span>
+                </div>
+                <div class="detail-item">
+                  <strong>Best For</strong>
+                  <span>Home health aide requests, personal care planning, nursing questions, therapy coordination, and general service inquiries.</span>
+                </div>
+              </div>
+              <div class="faq-list">
+                <div class="faq-item">
+                  <strong>What should I include in my message?</strong>
+                  <span class="muted">The patient’s county, requested services, and a short description of current care needs are the most helpful starting points.</span>
+                </div>
+                <div class="faq-item">
+                  <strong>Who should contact you?</strong>
+                  <span class="muted">Patients, family members, referral partners, and prospective caregivers are all welcome to reach out.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-card reveal delay-1">
+              <h2>Request Care</h2>
+              <p class="form-note">Share a few details and a care coordinator will follow up with you shortly.</p>
+              <form id="contactForm">
+                <div class="form-grid">
+                  <label for="contact-name">Full Name
+                    <input id="contact-name" name="name" type="text" required />
+                  </label>
+                  <label for="contact-phone">Phone Number
+                    <input id="contact-phone" name="phone" type="tel" required />
+                  </label>
+                </div>
+                <div class="form-grid">
+                  <label for="contact-email">Email Address
+                    <input id="contact-email" name="email" type="email" required />
+                  </label>
+                  <label for="contact-county">County
+                    <select id="contact-county" name="county">
+                      <option value="">Select county</option>
+                      <option>Bronx</option>
+                      <option>Kings</option>
+                      <option>New York</option>
+                      <option>Queens</option>
+                      <option>Richmond</option>
+                      <option>Westchester</option>
+                    </select>
+                  </label>
+                </div>
+                <label for="contact-message">How can we help?
+                  <textarea id="contact-message" name="message" placeholder="Tell us about the care needs, services you are looking for, and any questions you want us to answer." required></textarea>
+                </label>
+                <input type="submit" value="Send Request" />
+                <p class="status" id="contactStatus" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="map-card reveal">
+            <h2>Find Our Office</h2>
+            <div class="map-frame">
+              <iframe
+                title="Google map for 1st Aide Home Care, Inc."
+                src="https://www.google.com/maps?q=37-18%2073rd%20Street%2C%20Suite%20401%2C%20Jackson%20Heights%2C%20NY%2011372&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>1st Aide Home Care, Inc. • Request care across NYC and Westchester</div>
+        <div><a href="tel:17184409207">718-440-9207</a> • Fax: 718-440-9208</div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="/site.js"></script>
+  <script>
+    const contactForm = document.getElementById('contactForm');
+    const contactStatus = document.getElementById('contactStatus');
+
+    contactForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      contactStatus.textContent = 'Sending your request...';
+
+      const payload = Object.fromEntries(new FormData(contactForm).entries());
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await response.json();
+
+      if (!response.ok) {
+        contactStatus.textContent = data.error || 'Unable to send your message right now.';
+        return;
+      }
+
+      contactForm.reset();
+      contactStatus.textContent = data.message;
+    });
+  </script>
+</body>
+</html>

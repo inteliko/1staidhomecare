@@ -1,0 +1,26 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="48" fill="#F9EEF4"/>
+  <circle cx="965" cy="126" r="112" fill="#EFD1E0"/>
+  <circle cx="215" cy="664" r="152" fill="#F3DCE7"/>
+  <rect x="150" y="124" width="900" height="512" rx="34" fill="white"/>
+  <rect x="202" y="176" width="390" height="408" rx="28" fill="#F8F4F7"/>
+  <rect x="624" y="176" width="324" height="84" rx="22" fill="#F7E7EF"/>
+  <rect x="624" y="286" width="280" height="22" rx="11" fill="#E1C2D2"/>
+  <rect x="624" y="330" width="240" height="22" rx="11" fill="#E9D1DD"/>
+  <rect x="624" y="422" width="238" height="118" rx="28" fill="#873260"/>
+  <rect x="654" y="454" width="170" height="18" rx="9" fill="#F8DDEB"/>
+  <rect x="654" y="488" width="124" height="18" rx="9" fill="#F2C5D9"/>
+  <circle cx="325" cy="304" r="78" fill="#F0C8B5"/>
+  <path d="M265 290C265 249.131 298.131 216 339 216H347C387.869 216 421 249.131 421 290V324H265V290Z" fill="#6F234C"/>
+  <rect x="270" y="376" width="188" height="132" rx="46" fill="#D9A5BE"/>
+  <rect x="262" y="396" width="204" height="96" rx="48" fill="#E7BED1"/>
+  <path d="M364 384C408.183 384 444 419.817 444 464V532H284V464C284 419.817 319.817 384 364 384Z" fill="#873260"/>
+  <rect x="416" y="366" width="62" height="162" rx="31" transform="rotate(18 416 366)" fill="#F0C8B5"/>
+  <rect x="470" y="382" width="48" height="130" rx="24" transform="rotate(18 470 382)" fill="#FFF4F8"/>
+  <rect x="224" y="364" width="62" height="162" rx="31" transform="rotate(-26 224 364)" fill="#F0C8B5"/>
+  <rect x="182" y="386" width="48" height="124" rx="24" transform="rotate(-26 182 386)" fill="#F7E7EF"/>
+  <circle cx="278" cy="272" r="14" fill="#6F234C"/>
+  <circle cx="389" cy="274" r="14" fill="#6F234C"/>
+  <path d="M311 334C327.245 347.147 347.655 354.352 368.5 354.352C389.345 354.352 409.755 347.147 426 334" stroke="#6F234C" stroke-width="14" stroke-linecap="round"/>
+  <path d="M701 210H728V182H766V210H793V248H766V276H728V248H701V210Z" fill="#873260"/>
+</svg>
